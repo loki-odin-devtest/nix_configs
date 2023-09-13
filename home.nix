@@ -26,6 +26,17 @@
   #  "Xft.dpi" = 172;
   # };
 
+  # Set dconf settings
+  dconf.settings = {
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = "close,minimize,maximize:appmenu";
+    };
+
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
@@ -57,6 +68,7 @@
     ipcalc  # it is a calculator for the IPv4/v6 addresses
 
     # misc
+    broot
     file
     which
     tree
@@ -65,9 +77,13 @@
     gawk
     zstd
     gnupg
-    dua
+    nb
+    duf
+    du-dust
     fd
+    tldr
     stacer
+    obsidian
     
     # nix related
     #
@@ -114,6 +130,7 @@
      s = "sudo poweroff";
      eza = "eza -blah";
      bat = "bat --paging=never";
+     exa = "eza -blah";
      # k = "kubectl";
     };
   };

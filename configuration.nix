@@ -65,6 +65,26 @@
   # Enable CUPS to print documents.
  # services.printing.enable = true;
 
+ # Exclude unneeded Gnome packages
+ environment.gnome.excludePackages = (with pkgs; [
+  gnome-photos
+  gnome-tour
+]) ++ (with pkgs.gnome; [
+  cheese # webcam tool
+  gnome-music
+  gnome-weather
+  gnome-maps
+  epiphany # web browser
+  geary # email reader
+  evince # document viewer
+  gnome-characters
+  totem # video player
+  tali # poker game
+  iagno # go game
+  hitori # sudoku game
+  atomix # puzzle game
+]);
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -126,7 +146,14 @@
      gnome.gnome-terminal
      gnome-extension-manager
      gnomeExtensions.dash-to-dock
+     gnomeExtensions.appindicator
+     gnome.gnome-settings-daemon
+     gnome.dconf-editor
      zerofree
+     vscode
+     nix-du
+     graphviz
+     
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
