@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # TODO please change the username & home direcotry to your own
   home.username = "alternex";
   home.homeDirectory = "/home/alternex";
 
@@ -46,8 +45,7 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    # here is some command line tools I use frequently
-    # feel free to add your own or remove some of them
+    
 
     neofetch
     nnn # terminal file manager
@@ -116,7 +114,6 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    # TODO add your cusotm bashrc here
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
     '';
