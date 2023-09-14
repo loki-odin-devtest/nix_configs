@@ -151,6 +151,7 @@
      gnome.dconf-editor
      zerofree
      vscode
+     vscode-extensions.mkhl.direnv
      nix-du
      graphviz
      
