@@ -138,6 +138,7 @@
      nano
      git
      rsync
+     gdu
      ncdu
      btop
      eza
