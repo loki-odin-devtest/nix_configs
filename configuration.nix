@@ -113,6 +113,8 @@
      btop
      eza
      bat
+     tmux
+     screen
      gnome.gnome-tweaks
      gnome.gnome-terminal
      gnome-extension-manager
@@ -125,6 +127,8 @@
      vscode-extensions.mkhl.direnv
      nix-du
      graphviz
+     terminator
+     
      
   ];
 
