@@ -128,6 +128,7 @@
      nix-du
      graphviz
      terminator
+     warp-terminal
      
      
   ];
