@@ -128,7 +128,7 @@
      nix-du
      graphviz
      terminator
-     warp-terminal
+     #warp-terminal #Never again
      
      
   ];
