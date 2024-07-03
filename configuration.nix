@@ -126,6 +126,7 @@
      vscode-extensions.mkhl.direnv
      nix-du
      graphviz
+     os-prober
      
   ];
 
