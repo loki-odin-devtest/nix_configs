@@ -116,6 +116,7 @@
      bat
      gnome.gnome-tweaks
      gnome.gnome-terminal
+     gnome.gnome-shell-extensions
      gnome-extension-manager
      gnomeExtensions.dash-to-dock
      gnomeExtensions.appindicator
