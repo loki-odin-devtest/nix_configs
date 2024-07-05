@@ -68,6 +68,15 @@
   gnome.atomix # puzzle game
 ]);
 
+ # Enable CUPS to print documents.
+ services.printing.enable = true;
+ services.printing.drivers = [ 
+	
+	pkgs.gutenprint # — Drivers for many different printers from many different vendors.
+	pkgs.cnijfilter2 # — Drivers for some Canon Pixma devices (Proprietary driver)
+	
+	]; 
+
  #  Enable sound with pipewire.
  sound.enable = lib.mkForce false;
  #hardware.pulseaudio.enable = false;
