@@ -101,6 +101,20 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  #----=[ Fonts ]=----#
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    ubuntu_font_family
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    fira
+  ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -128,6 +142,29 @@
      nix-du
      graphviz
      os-prober
+     nmap
+     fuse
+     fuse3
+     appimage-run
+     tor-browser
+     ffmpeg-full
+     jellyfin-ffmpeg
+     gh
+     gitui
+     lazygit
+     yt-dlp
+     python3
+     nemu
+     qemu
+     virt-manager
+     quickemu
+     quickgui
+     tree
+     distrobox
+     tailscale
+     procs
+     
+
      
   ];
 

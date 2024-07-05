@@ -128,6 +128,8 @@
      eza = "eza -blah";
      bat = "bat --paging=never";
      exa = "eza -blah";
+     dot = "cd /home/alternex/.dotfiles/nix_configs";
+     dev = "cd /home/alternex/dev";
      # k = "kubectl";
     };
   };
