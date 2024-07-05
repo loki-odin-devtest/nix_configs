@@ -70,14 +70,14 @@
 
  #  Enable sound with pipewire.
  sound.enable = false;
- hardware.pulseaudio.enable = false;
- security.rtkit.enable = false;
- services.pipewire = {
-    enable = false;
-    alsa.enable = false;
-    alsa.support32Bit = false;
-    pulse.enable = false;
-  };
+ #hardware.pulseaudio.enable = false;
+ #security.rtkit.enable = false;
+ #services.pipewire = {
+ #   enable = false;
+ #   alsa.enable = false;
+ #   alsa.support32Bit = false;
+ #   pulse.enable = false;
+ # };
 
   users.users.alternex = {
     isNormalUser = true;
