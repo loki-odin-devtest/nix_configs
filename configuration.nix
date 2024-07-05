@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -69,7 +69,7 @@
 ]);
 
  #  Enable sound with pipewire.
- sound.enable = false;
+ sound.enable = lib.mkForce false;
  #hardware.pulseaudio.enable = false;
  #security.rtkit.enable = false;
  #services.pipewire = {
