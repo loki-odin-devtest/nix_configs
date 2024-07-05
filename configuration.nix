@@ -52,20 +52,20 @@
  environment.gnome.excludePackages = (with pkgs; [
   gnome-photos
   gnome-tour
-]) ++ (with pkgs.gnome; [
+]) ++ (with pkgs; [
   cheese # webcam tool
-  gnome-music
-  gnome-weather
-  gnome-maps
+  gnome.gnome-music
+  gnome.gnome-weather
+  gnome.gnome-maps
   epiphany # web browser
   geary # email reader
   evince # document viewer
-  gnome-characters
+  gnome.gnome-characters
   totem # video player
-  tali # poker game
-  iagno # go game
-  hitori # sudoku game
-  atomix # puzzle game
+  gnome.tali # poker game
+  gnome.iagno # go game
+  gnome.hitori # sudoku game
+  gnome.atomix # puzzle game
 ]);
 
  #  Enable sound with pipewire.
@@ -128,14 +128,14 @@
      btop
      eza
      bat
-     gnome.gnome-tweaks
-     gnome.gnome-terminal
+     gnome-tweaks
+     gnome-terminal
      gnome.gnome-shell-extensions
      gnome-extension-manager
      gnomeExtensions.dash-to-dock
      gnomeExtensions.appindicator
      gnome.gnome-settings-daemon
-     gnome.dconf-editor
+     dconf-editor
      zerofree
      vscode
      vscode-extensions.mkhl.direnv
@@ -154,7 +154,6 @@
      lazygit
      yt-dlp
      python3
-     nemu
      qemu
      virt-manager
      quickemu
