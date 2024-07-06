@@ -107,6 +107,9 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
+  # Mullvad Service
+  services.mullvad-vpn.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
