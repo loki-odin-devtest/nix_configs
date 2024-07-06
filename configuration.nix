@@ -152,7 +152,7 @@
      gnomeExtensions.dash-to-dock
      gnomeExtensions.appindicator
      gnome.gnome-settings-daemon
-     gnome.seahorse
+     seahorse
      dconf-editor
      zerofree
      vscode
@@ -193,6 +193,7 @@
      procs
      clamav
      ventoy
+     gparted
      
 
      
