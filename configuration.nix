@@ -179,7 +179,11 @@
      tldr
      distrobox
      tailscale
+     gnupg
      gnupg1
+     gpg-tui
+     gpa
+     enc
      bitwarden
      keepassxc
      mullvad
