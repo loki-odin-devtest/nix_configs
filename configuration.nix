@@ -113,6 +113,11 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Allow seahorse and appimages to run
+  programs.seahorse.enable = true;
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
+
   #----=[ Fonts ]=----#
 
   fonts.packages = with pkgs; [
@@ -147,6 +152,7 @@
      gnomeExtensions.dash-to-dock
      gnomeExtensions.appindicator
      gnome.gnome-settings-daemon
+     gnome.seahorse
      dconf-editor
      zerofree
      vscode
@@ -185,6 +191,8 @@
      mullvad
      mullvad-vpn
      procs
+     clamav
+     ventoy
      
 
      
