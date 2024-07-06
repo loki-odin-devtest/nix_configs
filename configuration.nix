@@ -184,6 +184,8 @@
      gpg-tui
      gpa
      enc
+     pinentry-tty
+     pinentry-gnome3
      bitwarden
      keepassxc
      mullvad
