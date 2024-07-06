@@ -179,7 +179,9 @@
      tldr
      distrobox
      tailscale
-     gnupg
+     gnupg1
+     bitwarden
+     keepassxc
      mullvad
      mullvad-vpn
      procs
