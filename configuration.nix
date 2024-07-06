@@ -163,6 +163,7 @@
      lazygit
      yt-dlp
      python3
+     python311Packages.pip
      qemu
      virt-manager
      quickemu
