@@ -150,6 +150,8 @@
      vscode-extensions.mkhl.direnv
      nix-du
      graphviz
+     glances
+     glow
      os-prober
      nmap
      fuse
@@ -164,13 +166,17 @@
      yt-dlp
      python3
      python311Packages.pip
+     python311Packages.bpython
+     python311Packages.keep
      qemu
      virt-manager
      quickemu
      quickgui
      tree
+     tldr
      distrobox
      tailscale
+     mullvad
      procs
      
 
