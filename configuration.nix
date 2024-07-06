@@ -182,10 +182,7 @@
      gnupg
      gnupg1
      gpg-tui
-     gpa
-     enc
-     pinentry-tty
-     pinentry-gnome3
+     pinentry-all
      bitwarden
      keepassxc
      mullvad
