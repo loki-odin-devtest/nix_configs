@@ -177,6 +177,7 @@
      distrobox
      tailscale
      mullvad
+     mullvad-vpn
      procs
      
 
