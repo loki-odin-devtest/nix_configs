@@ -154,6 +154,7 @@
      gnome.gnome-settings-daemon
      seahorse
      dconf-editor
+     dconf2nix
      zerofree
      vscode
      vscode-extensions.mkhl.direnv
@@ -194,7 +195,7 @@
      clamav
      ventoy
      gparted
-     
+     meld
 
      
   ];

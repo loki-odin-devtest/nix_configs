@@ -5,6 +5,15 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "apps/seahorse/listing" = {
+      keyrings-selected = [ "gnupg://" ];
+    };
+
+    "apps/seahorse/windows/key-manager" = {
+      height = 476;
+      width = 600;
+    };
+
     "ca/desrt/dconf-editor" = {
       saved-pathbar-path = "/";
       saved-view = "/";
@@ -15,6 +24,41 @@ with lib.hm.gvariant;
 
     "com/mattjakeman/ExtensionManager" = {
       last-used-version = "0.4.2";
+    };
+
+    "org/gnome/Connections" = {
+      first-run = false;
+    };
+
+    "org/gnome/Console" = {
+      last-window-maximised = false;
+      last-window-size = mkTuple [ 652 480 ];
+    };
+
+    "org/gnome/TextEditor" = {
+      last-save-directory = "file:///home/alternex/Documents";
+    };
+
+    "org/gnome/baobab/ui" = {
+      is-maximized = false;
+      window-size = mkTuple [ 960 600 ];
+    };
+
+    "org/gnome/calculator" = {
+      accuracy = 9;
+      angle-units = "degrees";
+      base = 10;
+      button-mode = "basic";
+      number-format = "automatic";
+      show-thousands = false;
+      show-zeroes = false;
+      source-currency = "";
+      source-units = "degree";
+      target-currency = "";
+      target-units = "radian";
+      window-maximized = false;
+      window-size = mkTuple [ 360 504 ];
+      word-size = 64;
     };
 
     "org/gnome/control-center" = {
@@ -32,10 +76,40 @@ with lib.hm.gvariant;
       translate = false;
     };
 
+    "org/gnome/desktop/app-folders/folders/1c0b02a5-41a3-447f-9430-c4ffc8c5017f" = {
+      apps = [ "ca.desrt.dconf-editor.desktop" "com.github.hluk.copyq.desktop" "com.mattjakeman.ExtensionManager.desktop" "obsidian.desktop" "nnn.desktop" "btop.desktop" "xterm.desktop" "stacer.desktop" "org.gnome.Extensions.desktop" ];
+      name = "Useful";
+      translate = false;
+    };
+
     "org/gnome/desktop/app-folders/folders/368263ed-f8e7-4c71-894d-cd1bba9203f1" = {
       apps = [ "org.gnome.Calendar.desktop" "org.gnome.Contacts.desktop" "simple-scan.desktop" "org.gnome.clocks.desktop" "org.gnome.Calculator.desktop" "nixos-manual.desktop" "yelp.desktop" ];
       name = "TiddlyBits";
       translate = false;
+    };
+
+    "org/gnome/desktop/app-folders/folders/514d1d6d-e5a7-4393-9e95-cc73146b9875" = {
+      apps = [ "quickgui.desktop" "virt-manager.desktop" "mullvad-vpn.desktop" "org.bpython-interpreter.bpython.desktop" "torbrowser.desktop" "org.keepassxc.KeePassXC.desktop" "bitwarden.desktop" "gpa.desktop" "org.qbittorrent.qBittorrent.desktop" ];
+      name = "Be the Change";
+      translate = false;
+    };
+
+    "org/gnome/desktop/app-folders/folders/8716180b-56ef-4b7b-ade7-a22ae94ad4fe" = {
+      apps = [ "org.gnome.Contacts.desktop" "org.gnome.Geary.desktop" "org.gnome.Weather.desktop" "org.gnome.clocks.desktop" "org.gnome.Maps.desktop" "org.gnome.Snapshot.desktop" "cups.desktop" "org.gnome.Totem.desktop" "simple-scan.desktop" "nixos-manual.desktop" "yelp.desktop" "org.gnome.Music.desktop" "org.gnome.Epiphany.desktop" "org.gnome.Tour.desktop" "org.gnome.Calendar.desktop" ];
+      name = "piddletiddles";
+      translate = false;
+    };
+
+    "org/gnome/desktop/app-folders/folders/975883dd-de8e-4437-bb6a-e1b0e21a012c" = {
+      apps = [ "org.gnome.Snapshot.desktop" "org.gnome.Loupe.desktop" "cups.desktop" ];
+      name = "Nonce";
+      translate = false;
+    };
+
+    "org/gnome/desktop/app-folders/folders/Pardus" = {
+      categories = [ "X-Pardus-Apps" ];
+      name = "X-Pardus-Apps.directory";
+      translate = true;
     };
 
     "org/gnome/desktop/app-folders/folders/Utilities" = {
@@ -52,7 +126,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/background" = {
+      color-shading-type = "solid";
+      picture-options = "zoom";
       picture-uri = "file:///home/alternex/Pictures/Wallpapers/Gnome_G018_HD_NoLogo.png";
+      picture-uri-dark = "file:///home/alternex/.local/share/backgrounds/2024-07-03-20-33-13-breno-machado-in9-n0JwgZ0-unsplash.jpg";
+      primary-color = "#000000000000";
+      secondary-color = "#000000000000";
     };
 
     "org/gnome/desktop/input-sources" = {
@@ -76,6 +155,10 @@ with lib.hm.gvariant;
       application-id = "firefox.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/gnome-printers-panel" = {
+      application-id = "gnome-printers-panel.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/org-gnome-fileroller" = {
       application-id = "org.gnome.FileRoller.desktop";
     };
@@ -84,12 +167,40 @@ with lib.hm.gvariant;
       application-id = "org.gnome.Nautilus.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/org-gnome-settings" = {
+      application-id = "org.gnome.Settings.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-texteditor" = {
+      application-id = "org.gnome.TextEditor.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent" = {
+      application-id = "org.qbittorrent.qBittorrent.desktop";
+    };
+
+    "org/gnome/desktop/privacy" = {
+      old-files-age = mkUint32 30;
+      recent-files-max-age = -1;
+    };
+
+    "org/gnome/desktop/screensaver" = {
+      color-shading-type = "solid";
+      lock-delay = mkUint32 300;
+      lock-enabled = true;
+      picture-options = "zoom";
+      picture-uri = "file:///home/alternex/.local/share/backgrounds/2024-07-03-20-33-13-breno-machado-in9-n0JwgZ0-unsplash.jpg";
+      primary-color = "#000000000000";
+      secondary-color = "#000000000000";
+    };
+
     "org/gnome/desktop/session" = {
       idle-delay = mkUint32 0;
     };
 
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "close,minimize,maximize:appmenu";
+      theme = "Sweet";
     };
 
     "org/gnome/evolution-data-server" = {
@@ -97,8 +208,16 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/file-roller/dialogs/extract" = {
+      height = 800;
       recreate-folders = true;
       skip-newer = false;
+      width = 1000;
+    };
+
+    "org/gnome/file-roller/file-selector" = {
+      show-hidden = false;
+      sidebar-size = 300;
+      window-size = mkTuple [ (-1) (-1) ];
     };
 
     "org/gnome/file-roller/listing" = {
@@ -133,10 +252,26 @@ with lib.hm.gvariant;
       sort-order = 0;
     };
 
+    "org/gnome/mutter" = {
+      overlay-key = "Super_R";
+    };
+
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
       search-filter-time-type = "last_modified";
+    };
+
+    "org/gnome/nautilus/window-state" = {
+      initial-size = mkTuple [ 1258 856 ];
+    };
+
+    "org/gnome/portal/filechooser/org/gnome/Settings" = {
+      last-folder-path = "/home/alternex/Pictures/user_icon";
+    };
+
+    "org/gnome/portal/filechooser/org/gnome/tweaks" = {
+      last-folder-path = "/home/alternex/Pictures/wallpapers";
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
@@ -155,34 +290,62 @@ with lib.hm.gvariant;
       app-picker-layout = "[{'368263ed-f8e7-4c71-894d-cd1bba9203f1': <{'position': <0>}>, '066e4466-05f3-42e3-93d4-19a0c2efa3cf': <{'position': <1>}>, 'org.gnome.Settings.desktop': <{'position': <2>}>, 'gnome-system-monitor.desktop': <{'position': <3>}>, 'Utilities': <{'position': <4>}>, 'xterm.desktop': <{'position': <5>}>}]";
       enabled-extensions = [ "dash-to-dock@micxgx.gmail.com" "user-theme@gnome-shell-extensions.gcampax.github.com" ];
       favorite-apps = [ "firefox.desktop" "org.gnome.Terminal.desktop" "org.gnome.Nautilus.desktop" "code.desktop" "org.gnome.TextEditor.desktop" ];
+      last-selected-power-profile = "performance";
       welcome-dialog-last-shown-version = "44.2";
     };
 
+    "org/gnome/shell/extensions/caffeine" = {
+      indicator-position-max = 2;
+    };
+
+    "org/gnome/shell/extensions/clipboard-indicator" = {
+      clear-history = [ "F8" ];
+      next-entry = [ "<Alt>n" ];
+      prev-entry = [ "<Alt>z" ];
+      private-mode-binding = [ "<Alt>p" ];
+      toggle-menu = [ "<Alt>v" ];
+    };
+
     "org/gnome/shell/extensions/dash-to-dock" = {
-      background-color = "rgb(107,64,191)";
+      apply-custom-theme = false;
+      background-color = "rgb(36,31,49)";
       background-opacity = 0.88;
       custom-background-color = true;
       dash-max-icon-size = 68;
       disable-overview-on-startup = true;
       dock-fixed = true;
       dock-position = "BOTTOM";
+      extend-height = false;
       height-fraction = 0.9;
       preferred-monitor = -2;
-      preferred-monitor-by-connector = "Virtual-1";
+      preferred-monitor-by-connector = "HDMI-1";
       show-trash = false;
       transparency-mode = "FIXED";
+    };
+
+    "org/gnome/shell/extensions/gsconnect" = {
+      enabled = true;
     };
 
     "org/gnome/shell/extensions/user-theme" = {
       name = "Shades-of-purple";
     };
 
+    "org/gnome/shell/extensions/yakuake-extension" = {
+      my-shortcut = [ "zx" ];
+    };
+
+    "org/gnome/shell/world-clocks" = {
+      locations = [];
+    };
+
     "org/gnome/terminal/legacy" = {
+      new-terminal-mode = "tab";
       theme-variant = "dark";
     };
 
     "org/gnome/terminal/legacy/profiles:" = {
-      default = "bdd80946-294d-4774-83fd-9d10cf82ab05";
+      default = "58047096-b657-4fde-b303-eff1b93f16d6";
       list = [ "b1dcc9dd-5262-4d8d-a863-c897e6d979b9" "0ee097c4-b546-42aa-9ec4-250cb50755b3" "bdd80946-294d-4774-83fd-9d10cf82ab05" "2760431b-eee0-4884-bffe-f97c8ccfb01c" "58047096-b657-4fde-b303-eff1b93f16d6" ];
     };
 
@@ -206,7 +369,43 @@ with lib.hm.gvariant;
       visible-name = "Sweet Eliverlara";
     };
 
+    "org/gnome/terminal/legacy/profiles:/:46c77bc8-1288-4b58-a7cb-348b60b6017b" = {
+      allow-bold = true;
+      background-color = "#28282C2C3434";
+      bold-color = "#C3C3C7C7D1D1";
+      bold-color-same-as-fg = true;
+      cursor-background-color = "#C3C3C7C7D1D1";
+      cursor-colors-set = true;
+      cursor-foreground-color = "#28282C2C3434";
+      foreground-color = "#C3C3C7C7D1D1";
+      palette = [ "#28282C2C3434" "#EDED25254E4E" "#7171F7F79F9F" "#F9F9DCDC5C5C" "#7C7CB7B7FFFF" "#C7C74D4DEDED" "#0000C1C1E4E4" "#DCDCDFDFE4E4" "#28282C2C3434" "#EDED25254E4E" "#7171F7F79F9F" "#F9F9DCDC5C5C" "#7C7CB7B7FFFF" "#C7C74D4DEDED" "#0000C1C1E4E4" "#DCDCDFDFE4E4" ];
+      use-theme-background = false;
+      use-theme-colors = false;
+      use-theme-transparency = false;
+      visible-name = "Sweet Eliverlara";
+    };
+
     "org/gnome/terminal/legacy/profiles:/:58047096-b657-4fde-b303-eff1b93f16d6" = {
+      allow-bold = true;
+      audible-bell = false;
+      background-color = "#222222223535";
+      bold-color = "#FFFFFFFFFFFF";
+      bold-color-same-as-fg = true;
+      bold-is-bright = true;
+      cursor-background-color = "#FFFFFFFFFFFF";
+      cursor-colors-set = true;
+      cursor-foreground-color = "#222222223535";
+      font = "Source Code Pro 14";
+      foreground-color = "#FFFFFFFFFFFF";
+      palette = [ "#3F3F3F3F5454" "#F6F600005555" "#0606C9C99393" "#97970000BEBE" "#F6F691915454" "#ECEC8989CBCB" "#6060ADADECEC" "#ABABB2B2BFBF" "#95959D9DCBCB" "#F6F600005555" "#0606C9C99393" "#97970000BEBE" "#F6F691915454" "#ECEC8989CBCB" "#0000DDDDEDED" "#FFFFFFFFFFFF" ];
+      use-system-font = false;
+      use-theme-background = false;
+      use-theme-colors = false;
+      use-theme-transparency = false;
+      visible-name = "Sweet Terminal";
+    };
+
+    "org/gnome/terminal/legacy/profiles:/:76913da3-819f-4393-9022-c0c2ff7c5c8c" = {
       allow-bold = true;
       background-color = "#222222223535";
       bold-color = "#FFFFFFFFFFFF";
@@ -220,6 +419,10 @@ with lib.hm.gvariant;
       use-theme-colors = false;
       use-theme-transparency = false;
       visible-name = "Sweet Terminal";
+    };
+
+    "org/gnome/terminal/legacy/profiles:/:9227e052-d1bb-425c-9316-b3a89ea6821c" = {
+      visible-name = "placeholder";
     };
 
     "org/gnome/terminal/legacy/profiles:/:bdd80946-294d-4774-83fd-9d10cf82ab05" = {
@@ -243,12 +446,21 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.4200000762939453 0.2499999850988388 ]) ];
-      selected-color = mkTuple [ true 0.4200000762939453 ];
+      custom-colors = [ (mkTuple [ 0.41960784792900085 0.250980406999588 0.7490196228027344 1.0 ]) ];
+      selected-color = mkTuple [ true 0.1411764770746231 0.12156862765550613 0.1921568661928177 1.0 ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
+      date-format = "regular";
+      location-mode = "path-bar";
       show-hidden = true;
+      sidebar-width = 140;
+      sort-column = "name";
+      sort-directories-first = true;
+      sort-order = "ascending";
+      type-format = "category";
+      view-type = "list";
+      window-size = mkTuple [ 859 372 ];
     };
 
     "org/gtk/settings/file-chooser" = {
