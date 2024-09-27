@@ -163,6 +163,7 @@
      glances
      glow
      os-prober
+     smartmontools
      nmap
      fuse
      fuse3
