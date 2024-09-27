@@ -62,12 +62,18 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "multitasking";
-      window-state = mkTuple [ 980 640 ];
+      last-panel = "privacy";
+      window-state = mkTuple [ 980 640 false ];
     };
 
     "org/gnome/desktop/app-folders" = {
       folder-children = [ "Utilities" "YaST" "066e4466-05f3-42e3-93d4-19a0c2efa3cf" "368263ed-f8e7-4c71-894d-cd1bba9203f1" ];
+    };
+
+    "org/gnome/desktop/app-folders/folders/0112c516-ed4d-41ed-9123-417d418b9ddb" = {
+      apps = [ "mullvad-vpn.desktop" "torbrowser.desktop" "bitwarden.desktop" "org.keepassxc.KeePassXC.desktop" ];
+      name = "IllusionarySec";
+      translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/066e4466-05f3-42e3-93d4-19a0c2efa3cf" = {
@@ -91,6 +97,12 @@ with lib.hm.gvariant;
     "org/gnome/desktop/app-folders/folders/514d1d6d-e5a7-4393-9e95-cc73146b9875" = {
       apps = [ "quickgui.desktop" "virt-manager.desktop" "mullvad-vpn.desktop" "org.bpython-interpreter.bpython.desktop" "torbrowser.desktop" "org.keepassxc.KeePassXC.desktop" "bitwarden.desktop" "gpa.desktop" "org.qbittorrent.qBittorrent.desktop" ];
       name = "Be the Change";
+      translate = false;
+    };
+
+    "org/gnome/desktop/app-folders/folders/733bc522-342d-40a4-93d1-e46fe2c2f2b2" = {
+      apps = [ "org.qbittorrent.qBittorrent.desktop" "quickgui.desktop" "org.bpython-interpreter.bpython.desktop" "virt-manager.desktop" ];
+      name = "DevelopmentSorta";
       translate = false;
     };
 
@@ -128,8 +140,8 @@ with lib.hm.gvariant;
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///home/alternex/Pictures/Wallpapers/Gnome_G018_HD_NoLogo.png";
-      picture-uri-dark = "file:///home/alternex/.local/share/backgrounds/2024-07-03-20-33-13-breno-machado-in9-n0JwgZ0-unsplash.jpg";
+      picture-uri = "file:///home/alternex/.local/share/backgrounds/2024-09-27-17-39-20-8machine-_-oWFZm4NAvMQ-unsplash.jpg";
+      picture-uri-dark = "file:///home/alternex/.local/share/backgrounds/2024-09-27-17-39-20-8machine-_-oWFZm4NAvMQ-unsplash.jpg";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
@@ -157,6 +169,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/gnome-printers-panel" = {
       application-id = "gnome-printers-panel.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-extensions" = {
+      application-id = "org.gnome.Extensions.desktop";
     };
 
     "org/gnome/desktop/notifications/application/org-gnome-fileroller" = {
@@ -189,7 +205,7 @@ with lib.hm.gvariant;
       lock-delay = mkUint32 300;
       lock-enabled = true;
       picture-options = "zoom";
-      picture-uri = "file:///home/alternex/.local/share/backgrounds/2024-07-03-20-33-13-breno-machado-in9-n0JwgZ0-unsplash.jpg";
+      picture-uri = "file:///home/alternex/.local/share/backgrounds/2024-09-27-17-39-20-8machine-_-oWFZm4NAvMQ-unsplash.jpg";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
@@ -266,12 +282,24 @@ with lib.hm.gvariant;
       initial-size = mkTuple [ 1258 856 ];
     };
 
+    "org/gnome/portal/filechooser/code" = {
+      last-folder-path = "/home/alternex/dev/configs/workspace";
+    };
+
     "org/gnome/portal/filechooser/org/gnome/Settings" = {
-      last-folder-path = "/home/alternex/Pictures/user_icon";
+      last-folder-path-one = "/home/alternex/Pictures/wallpapers";
     };
 
     "org/gnome/portal/filechooser/org/gnome/tweaks" = {
-      last-folder-path = "/home/alternex/Pictures/wallpapers";
+      last-folder-path-two = "/home/alternex/Pictures/wallpapers";
+    };
+
+    "org/gnome/portal/filechooser/org/gnome/Settings" = {
+      last-folder-path-three = "/home/alternex/Pictures/user_icon";
+    };
+
+    "org/gnome/portal/filechooser/org/gnome/tweaks" = {
+      last-folder-path-four = "/home/alternex/Pictures/wallpapers";
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
@@ -282,12 +310,23 @@ with lib.hm.gvariant;
       night-light-temperature = mkUint32 1970;
     };
 
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" ];
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      binding = "<Super>x";
+      command = "gnome-terminal";
+      name = "Terminal Launch";
+    };
+
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = "nothing";
     };
 
     "org/gnome/shell" = {
       app-picker-layout = "[{'368263ed-f8e7-4c71-894d-cd1bba9203f1': <{'position': <0>}>, '066e4466-05f3-42e3-93d4-19a0c2efa3cf': <{'position': <1>}>, 'org.gnome.Settings.desktop': <{'position': <2>}>, 'gnome-system-monitor.desktop': <{'position': <3>}>, 'Utilities': <{'position': <4>}>, 'xterm.desktop': <{'position': <5>}>}]";
+      command-history = [ "kgx" "gnome-terminal" ];
       enabled-extensions = [ "dash-to-dock@micxgx.gmail.com" "user-theme@gnome-shell-extensions.gcampax.github.com" ];
       favorite-apps = [ "firefox.desktop" "org.gnome.Terminal.desktop" "org.gnome.Nautilus.desktop" "code.desktop" "org.gnome.TextEditor.desktop" ];
       last-selected-power-profile = "performance";
@@ -446,8 +485,8 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.41960784792900085 0.250980406999588 0.7490196228027344 1.0 ]) ];
-      selected-color = mkTuple [ true 0.1411764770746231 0.12156862765550613 0.1921568661928177 1.0 ];
+      custom-colors = [ (mkTuple [ 0.419608 0.25098 0.74902 1.0 ]) ];
+      selected-color = mkTuple [ true 0.141176 0.121569 0.192157 1.0 ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
