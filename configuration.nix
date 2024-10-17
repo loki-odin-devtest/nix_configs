@@ -42,7 +42,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];  
+  #services.xserver.videoDrivers = [ "amdgpu" ];  
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -69,13 +69,7 @@
 ]);
 
  # Enable CUPS to print documents.
- services.printing.enable = true;
- services.printing.drivers = [ 
-	
-	pkgs.gutenprint # — Drivers for many different printers from many different vendors.
-	pkgs.cnijfilter2 # — Drivers for some Canon Pixma devices (Proprietary driver)
-	
-	]; 
+ services.printing.enable = false;
 
  #  Enable sound with pipewire.
  sound.enable = lib.mkForce false;
@@ -106,9 +100,6 @@
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
-
-  # Mullvad Service
-  services.mullvad-vpn.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -162,44 +153,18 @@
      graphviz
      terminator
      #warp-terminal #Never again
-     
      glances
      glow
-     os-prober
-     smartmontools
-     nmap
-     fuse
-     fuse3
      appimage-run
-     tor-browser
-     ffmpeg-full
-     jellyfin-ffmpeg
      gh
      gitui
      lazygit
-     yt-dlp
      python3
      python311Packages.pip
      python311Packages.bpython
      python311Packages.keep
-     qemu
-     virt-manager
-     quickemu
-     quickgui
      tree
      tldr
-     distrobox
-     tailscale
-     qbittorrent
-     bitwarden
-     keepassxc
-     mullvad
-     mullvad-vpn
-     procs
-     clamav
-     ventoy
-     gparted
-     meld
 
      
   ];
