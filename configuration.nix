@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -42,6 +42,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];  
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -51,32 +52,41 @@
  environment.gnome.excludePackages = (with pkgs; [
   gnome-photos
   gnome-tour
-]) ++ (with pkgs.gnome; [
+]) ++ (with pkgs; [
   cheese # webcam tool
-  gnome-music
-  gnome-weather
-  gnome-maps
+  gnome.gnome-music
+  gnome.gnome-weather
+  gnome.gnome-maps
   epiphany # web browser
   geary # email reader
   evince # document viewer
-  gnome-characters
+  gnome.gnome-characters
   totem # video player
-  tali # poker game
-  iagno # go game
-  hitori # sudoku game
-  atomix # puzzle game
+  gnome.tali # poker game
+  gnome.iagno # go game
+  gnome.hitori # sudoku game
+  gnome.atomix # puzzle game
 ]);
 
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+ # Enable CUPS to print documents.
+ services.printing.enable = true;
+ services.printing.drivers = [ 
+	
+	pkgs.gutenprint # — Drivers for many different printers from many different vendors.
+	pkgs.cnijfilter2 # — Drivers for some Canon Pixma devices (Proprietary driver)
+	
+	]; 
+
+ #  Enable sound with pipewire.
+ sound.enable = lib.mkForce false;
+ #hardware.pulseaudio.enable = false;
+ #security.rtkit.enable = false;
+ #services.pipewire = {
+ #   enable = false;
+ #   alsa.enable = false;
+ #   alsa.support32Bit = false;
+ #   pulse.enable = false;
+ # };
 
   users.users.alternex = {
     isNormalUser = true;
@@ -97,8 +107,30 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
+  # Mullvad Service
+  services.mullvad-vpn.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Allow seahorse and appimages to run
+  programs.seahorse.enable = true;
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
+
+  #----=[ Fonts ]=----#
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    ubuntu_font_family
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    fira
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -113,15 +145,16 @@
      btop
      eza
      bat
-     tmux
-     screen
-     gnome.gnome-tweaks
-     gnome.gnome-terminal
+     gnome-tweaks
+     gnome-terminal
+     gnome.gnome-shell-extensions
      gnome-extension-manager
      gnomeExtensions.dash-to-dock
      gnomeExtensions.appindicator
      gnome.gnome-settings-daemon
-     gnome.dconf-editor
+     seahorse
+     dconf-editor
+     dconf2nix
      zerofree
      vscode
      vscode-extensions.mkhl.direnv
@@ -130,6 +163,44 @@
      terminator
      #warp-terminal #Never again
      
+     glances
+     glow
+     os-prober
+     smartmontools
+     nmap
+     fuse
+     fuse3
+     appimage-run
+     tor-browser
+     ffmpeg-full
+     jellyfin-ffmpeg
+     gh
+     gitui
+     lazygit
+     yt-dlp
+     python3
+     python311Packages.pip
+     python311Packages.bpython
+     python311Packages.keep
+     qemu
+     virt-manager
+     quickemu
+     quickgui
+     tree
+     tldr
+     distrobox
+     tailscale
+     qbittorrent
+     bitwarden
+     keepassxc
+     mullvad
+     mullvad-vpn
+     procs
+     clamav
+     ventoy
+     gparted
+     meld
+
      
   ];
 

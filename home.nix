@@ -109,6 +109,9 @@
      gs = "git status";
      ga = "git add";
      gc = "git commit -m";
+     dot = "cd /home/alternex/.dotfiles/nix_configs";
+     dev = "cd /home/alternex/dev";
+     # k = "kubectl";
     };
   };
 
