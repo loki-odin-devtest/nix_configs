@@ -197,6 +197,8 @@
      ventoy
      gparted
      meld
+     sigil #epub editor
+     calibre
 
      
   ];
