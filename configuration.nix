@@ -54,18 +54,18 @@
   gnome-tour
 ]) ++ (with pkgs; [
   cheese # webcam tool
-  gnome.gnome-music
-  gnome.gnome-weather
-  gnome.gnome-maps
+  gnome-music
+  gnome-weather
+  gnome-maps
   epiphany # web browser
   geary # email reader
   evince # document viewer
-  gnome.gnome-characters
+  gnome-characters
   totem # video player
-  gnome.tali # poker game
-  gnome.iagno # go game
-  gnome.hitori # sudoku game
-  gnome.atomix # puzzle game
+  tali # poker game
+  iagno # go game
+  hitori # sudoku game
+  atomix # puzzle game
 ]);
 
  # Enable CUPS to print documents.
@@ -147,11 +147,11 @@
      bat
      gnome-tweaks
      gnome-terminal
-     gnome.gnome-shell-extensions
+     gnome-shell-extensions
      gnome-extension-manager
      gnomeExtensions.dash-to-dock
      gnomeExtensions.appindicator
-     gnome.gnome-settings-daemon
+     gnome-settings-daemon
      seahorse
      dconf-editor
      dconf2nix
@@ -182,7 +182,7 @@
      qemu
      virt-manager
      quickemu
-     quickgui
+     #quickgui
      tree
      tldr
      distrobox
