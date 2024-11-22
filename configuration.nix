@@ -78,7 +78,7 @@
 	]; 
 
  #  Enable sound with pipewire.
- sound.enable = lib.mkForce false;
+# sound.enable = lib.mkForce false;
  #hardware.pulseaudio.enable = false;
  #security.rtkit.enable = false;
  #services.pipewire = {
