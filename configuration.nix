@@ -183,6 +183,7 @@
      python311Packages.bpython
      python311Packages.keep
      python311Packages.pip
+     python311Packages.virtualenv
      qbittorrent
      qemu
      quickemu
