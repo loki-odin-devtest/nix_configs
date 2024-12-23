@@ -110,6 +110,9 @@
   # Mullvad Service
   services.mullvad-vpn.enable = true;
 
+  # Tailscale Service
+  services.tailscale.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -135,70 +138,70 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     wget
-     curl
-     nano
-     git
-     rsync
-     gdu
-     ncdu
-     btop
-     eza
+     appimage-run
      bat
-     gnome-tweaks
-     gnome-terminal
-     gnome-shell-extensions
-     gnome-extension-manager
-     gnomeExtensions.dash-to-dock
-     gnomeExtensions.appindicator
-     gnome-settings-daemon
-     seahorse
-     dconf-editor
+     bitwarden
+     btop
+     calibre
+     clamav
+     curl
      dconf2nix
-     zerofree
-     vscode
-     vscode-extensions.mkhl.direnv
-     nix-du
-     graphviz
-     glances
-     glow
-     os-prober
-     smartmontools
-     nmap
+     dconf-editor
+     distrobox
+     eza
+     ffmpeg-full
      fuse
      fuse3
-     appimage-run
-     tor-browser
-     ffmpeg-full
-     jellyfin-ffmpeg
+     gdu
      gh
+     git
      gitui
-     lazygit
-     yt-dlp
-     python3
-     python311Packages.pip
-     python311Packages.bpython
-     python311Packages.keep
-     qemu
-     virt-manager
-     quickemu
-     #quickgui
-     tree
-     tldr
-     distrobox
-     tailscale
-     qbittorrent
-     bitwarden
+     glances
+     glow
+     gnome-extension-manager
+     gnomeExtensions.appindicator
+     gnomeExtensions.dash-to-dock
+     gnome-settings-daemon
+     gnome-shell-extensions
+     gnome-terminal
+     gnome-tweaks
+     gparted
+     graphviz
+     jellyfin-ffmpeg
      keepassxc
+     lazygit
+     meld
      mullvad
      mullvad-vpn
+     nano
+     ncdu
+     nix-du
+     nmap
+     os-prober
      procs
-     clamav
-     ventoy
-     gparted
-     meld
+     python3
+     python311Packages.bpython
+     python311Packages.keep
+     python311Packages.pip
+     qbittorrent
+     qemu
+     quickemu
+     #quickgui
+     rsync
+     seahorse
      sigil #epub editor
-     calibre
+     smartmontools
+     tailscale
+     tldr
+     tor-browser
+     tree
+     ventoy
+     virt-manager
+     vscode
+     vscode-extensions.mkhl.direnv
+     wget
+     yt-dlp
+     zerofree
 
      
   ];
